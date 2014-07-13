@@ -1,0 +1,140 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Contacto</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Vocativo</th>
+                <td>{{ entity.vocativo }}</td>
+            </tr>
+            <tr>
+                <th>Nombres</th>
+                <td>{{ entity.nombres }}</td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td>{{ entity.apellidos }}</td>
+            </tr>
+            <tr>
+                <th>Organizacion</th>
+                <td>{{ entity.organizacion }}</td>
+            </tr>
+            <tr>
+                <th>Titulo1</th>
+                <td>{{ entity.titulo1 }}</td>
+            </tr>
+            <tr>
+                <th>Titulo2</th>
+                <td>{{ entity.titulo2 }}</td>
+            </tr>
+            <tr>
+                <th>Dir1</th>
+                <td>{{ entity.dir1 }}</td>
+            </tr>
+            <tr>
+                <th>Dir2</th>
+                <td>{{ entity.dir2 }}</td>
+            </tr>
+            <tr>
+                <th>Codigopostal</th>
+                <td>{{ entity.codigopostal }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ entity.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ entity.fax }}</td>
+            </tr>
+            <tr>
+                <th>Movil</th>
+                <td>{{ entity.movil }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Observaciones</th>
+                <td>{{ entity.observaciones }}</td>
+            </tr>
+            <tr>
+                <th>Fechadeactualizacion</th>
+                <td>{{ entity.fechadeactualizacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Impresion</th>
+                <td>{{ entity.impresion }}</td>
+            </tr>
+            <tr>
+                <th>Horadeimpresion</th>
+                <td>{{ entity.horadeimpresion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Enviadas</th>
+                <td>{{ entity.enviadas }}</td>
+            </tr>
+            <tr>
+                <th>Horadeenvio</th>
+                <td>{{ entity.horadeenvio|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numinvitados</th>
+                <td>{{ entity.numInvitados }}</td>
+            </tr>
+            <tr>
+                <th>Numrespondidos</th>
+                <td>{{ entity.numRespondidos }}</td>
+            </tr>
+            <tr>
+                <th>Fechaderespuesta</th>
+                <td>{{ entity.fechaderespuesta|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Via</th>
+                <td>{{ entity.via }}</td>
+            </tr>
+            <tr>
+                <th>Contesto</th>
+                <td>{{ entity.contesto }}</td>
+            </tr>
+            <tr>
+                <th>Ingresohora</th>
+                <td>{{ entity.ingresohora|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Ingreso</th>
+                <td>{{ entity.ingreso }}</td>
+            </tr>
+            <tr>
+                <th>Hora</th>
+                <td>{{ entity.hora }}</td>
+            </tr>
+            <tr>
+                <th>Codigo</th>
+                <td>{{ entity.codigo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('contacto') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('contacto_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,4 @@
+contactos:
+    resource: "@ContactosBundle/Resources/config/routing.yml"
+    prefix:   /
+

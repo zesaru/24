@@ -1,0 +1,8 @@
+contactos_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ContactosBundle:Default:index }
+
+ContactosBundle_contacto:
+    resource: "@ContactosBundle/Resources/config/routing/contacto.yml"
+    prefix:   /contacto
+
