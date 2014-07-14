@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body%}
+<h5>Dashboard</h5>
+{{ totaldeinvitados }}
+<p> Total de Invitaciones:</p>
+<p></p>
+<p>Total de Personas Respondidas: {{ totalderespondieron }}</p>
+<p></p>
+<p>Total de Personas que Asistiran: {{ totalRespondieronSi }}</p>
+<p></p>
+<p>Total de Personas que no asistiran: {{ totalRespondieronNo }}</p>
+{% endblock %}

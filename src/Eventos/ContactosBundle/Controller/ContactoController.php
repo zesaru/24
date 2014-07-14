@@ -30,16 +30,22 @@ class ContactoController extends Controller
     }
 
 
-    public function inicioAction()
+    public function dashboardAction()
     {
         $em = $this->getDoctrine()->getManager();
 
        
-        $entities = $em->getRepository('ContactosBundle:Contacto')->findAll();
-    
+        $totaldeinvitados = $em->getRepository('ContactosBundle:Contacto')->findTotalDeInvitados();
+        $totalderespondieron = $em->getRepository('ContactosBundle:Contacto')->findTotalRespondieron();
+        $totalRespondieronSi = $em->getRepository('ContactosBundle:Contacto')->findTotalRespondieronSi();
+        $totalRespondieronNo = $em->getRepository('ContactosBundle:Contacto')->findTotalRespondieronNo();
 
-        return $this->render('ContactosBundle:Contacto:index.html.twig', array(
-            'entities' => $entities,
+        return $this->render('ContactosBundle:Contacto:dashboard.html.twig', array(
+            'totaldeinvitados' => $totaldeinvitados,
+            'totalderespondieron' => $totalderespondieron,
+            'totalRespondieronSi' => $totalRespondieronSi,
+            'totalRespondieronNo' => $totalRespondieronNo,
+
         ));
     }
 

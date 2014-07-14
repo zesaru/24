@@ -3,8 +3,8 @@ contacto:
     defaults: { _controller: "ContactosBundle:Contacto:index" }
 
 contacto_inicio:
-    path:     /inicio
-    defaults: { _controller: "ContactosBundle:Contacto:inicio" }
+    path:     /dashboard
+    defaults: { _controller: "ContactosBundle:Contacto:dashboard" }
 
 contacto_show:
     path:     /{id}/show
