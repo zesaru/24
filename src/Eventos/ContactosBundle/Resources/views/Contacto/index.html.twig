@@ -13,9 +13,10 @@
             <thead>
             <tr>
                 <th>Id</th>
+                <th>Categoria</th>
                 <th>Nombres y Apellidos</th>
                 <th>Organizacion</th>
-                <th>Titulo1</th>
+                <th>Titulo</th>
                 <th>Contesto</th>
                 <th></th>
 
@@ -25,13 +26,19 @@
             {% for entity in entities %}
                 <tr>
                     <td><a href="{{ path('contacto_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.categoria.nombre}}</td>
                     <td>{{ entity.vocativo }} {{ entity.nombres }} {{ entity.apellidos }}</td>
                     <td>{{ entity.organizacion }}</td>
                     <td>{{ entity.titulo1 }} {{ entity.titulo2 }}</td>
                     <td>
                         {% if entity.contesto==1 %}
                             SI
-                        {% elseif entity.contesto== 2 %}NO{% else%}SIN CONTESTAR{% endif %}</td>
+                        {% elseif entity.contesto== 2 %}NO
+
+                        {% else %}
+                        SIN CONTESTAR
+                        {% endif %}
+                    </td>
                     <td>
                         
                     <ul>

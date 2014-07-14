@@ -2,6 +2,10 @@ contacto:
     path:     /
     defaults: { _controller: "ContactosBundle:Contacto:index" }
 
+contacto_inicio:
+    path:     /inicio
+    defaults: { _controller: "ContactosBundle:Contacto:inicio" }
+
 contacto_show:
     path:     /{id}/show
     defaults: { _controller: "ContactosBundle:Contacto:show" }

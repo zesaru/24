@@ -23,6 +23,11 @@ class ContactoRepository extends EntityRepository
 	{
 		return $this->queryTodosLosContactos()->getResult();
 	}
+
+	public function finRespondieronSI()
+	{
+		
+	}
 }
 
 

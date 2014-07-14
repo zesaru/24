@@ -30,6 +30,19 @@ class ContactoController extends Controller
     }
 
 
+    public function inicioAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+       
+        $entities = $em->getRepository('ContactosBundle:Contacto')->findAll();
+    
+
+        return $this->render('ContactosBundle:Contacto:index.html.twig', array(
+            'entities' => $entities,
+        ));
+    }
+
 
     public function indexAction2()
     {
